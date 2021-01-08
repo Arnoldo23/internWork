@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ASCIImation</title>
+        <link rel="stylesheet" href="ascii.css">
+        <script src="animations.js"></script>
+        <script src="ascii.js"></script>
+        <script src="myanimation.js"></script>
+    </head>
+    <body>
+        <h1>ASCII Animation Viewer</h1>
+        <textarea name="" id="mytextarea" rows="20" cols="80" id="" class="animation-div"> </textarea>
+
+        <div class="field-div">
+            <fieldset id="ctr">
+                <legend>Play Controls:</legend>
+                <button id="b1" onclick="disableButtons('b1', 'b2'); startAnimation();" id="b1" >Start</button>
+                <button id="b2" onclick="disableButtons('b1', 'b2'); stopAnimation();" id="b2" disabled>Stop</button>
+            </fieldset>
+            <fieldset>
+                <legend>Animation:</legend>
+                <select id="selection" onchange="displayAnimation();">
+                    <option value="blank" selected>Blank</option>
+                    <option value="exercise">Exercise</option>
+                    <option value="juggler">Juggler</option>
+                    <option value="bike">Bike</option>
+                    <option value="dive">Dive</option>
+                    <option value="custom">Custom</option>
+                </select>             
+            </fieldset>
+            <fieldset>
+                <legend>Size:</legend>
+                <select id="size" onchange="changeSize();">
+                    <option value="medium" selected>Medium</option>
+                    <option value="tiny">Tiny</option>
+                    <option value="small">Small</option>
+                    <option value="large">Large</option>
+                    <option value="extralarge">Extra Large</option>
+                    <option value="xxl">XXL</option>
+                </select>
+            </fieldset>
+            <fieldset id="spd">
+                <legend>Speed:</legend>
+                    <input type="radio" name="speed" id="turbo" onclick="changeSpeed();">Turbo</input>
+                    <input type="radio" name="speed" id="normal" onclick="changeSpeed();" checked>Normal</input>
+                    <input type="radio" name="speed" id="slo-mo" onclick="changeSpeed();">Slo-Mo</input>
+            </fieldset>
+        </div>
+    </body>
+    
